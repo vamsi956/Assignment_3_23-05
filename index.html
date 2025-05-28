@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Appointment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+    }
+    .form-container {
+      margin-left: 50px;
+    }
+    h1 {
+      border-bottom: 2px solid #800040;
+      padding-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+    .form-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .form-row input[type="text"],
+    .form-row input[type="tel"],
+    .form-row input[type="date"],
+    .form-row input[type="time"],
+    .form-row textarea {
+      flex: 1;
+    }
+    textarea {
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://www.kindpng.com/picc/m/52-526237_female-doctor-png-pic-doctor-transparent-background-png.png" alt="Doctor Image" width="300">
+    <div class="form-container">
+      <h1>Doctor Appointment Form</h1>
+      <form>
+        <div class="form-row">
+          <label for="date">Appointment Date</label>
+          <input type="date" id="date" name="appointment_date">
+        </div>
+        <div class="form-row">
+          <label for="time">Appointment Time</label>
+          <input type="time" id="time" name="appointment_time">
+        </div>
+        <div class="form-row">
+          <label>Name</label>
+          <input type="text" placeholder="First" name="first_name">
+          <input type="text" placeholder="Last" name="last_name">
+        </div>
+        <div class="form-row">
+          <label>Gender</label>
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-row">
+          <label>Address</label>
+          <input type="text" placeholder="City" name="city">
+          <input type="text" placeholder="State" name="state">
+        </div>
+        <div class="form-row">
+          <label for="query">Your Query</label>
+          <textarea id="query" name="query"></textarea>
+        </div>
+        <div class="form-row">
+          <label>Appointment Type</label>
+          <div>
+            <label><input type="checkbox" name="appointment_type" value="cervix"> Cervix checkup</label><br>
+            <label><input type="checkbox" name="appointment_type" value="heart"> Heart checkup</label><br>
+            <label><input type="checkbox" name="appointment_type" value="eye"> Eye check-up</label><br>
+            <label><input type="checkbox" name="appointment_type" value="hearing"> Hearing Test</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
